@@ -64,9 +64,7 @@ func main() {
 		}))
 		// remove all non numeric characters
 		re = regexp.MustCompile(`[^0-9]`)
-		line = string(re.ReplaceAllFunc([]byte(line), func(match []byte) []byte {
-			return []byte("")
-		}))
+		line = string(re.ReplaceAll([]byte(line), []byte("")))
 		// get the first and last character
 		first := line[0]
 		last := line[len(line)-1]
