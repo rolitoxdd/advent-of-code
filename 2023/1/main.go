@@ -41,7 +41,7 @@ func reverse(str string) (result string) {
 }
 
 func main() {
-	REGEX := `one|two|three|four|five|six|seven|eight|nine`
+	const REGEX = `one|two|three|four|five|six|seven|eight|nine`
 	scanner := bufio.NewScanner(os.Stdin)
 	var counter int
 	for scanner.Scan() {
